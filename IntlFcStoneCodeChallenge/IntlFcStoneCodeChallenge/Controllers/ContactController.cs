@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Net;
+using System.Web.Http;
 using IntlFcStoneCodeChallenge.Context;
 using IntlFcStoneCodeChallenge.Models;
 using Microsoft.AspNetCore.Mvc;
+using FromBodyAttribute = Microsoft.AspNetCore.Mvc.FromBodyAttribute;
+using HttpPostAttribute = Microsoft.AspNetCore.Mvc.HttpPostAttribute;
+using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 namespace IntlFcStoneCodeChallenge.Controllers
 {
@@ -16,9 +20,9 @@ namespace IntlFcStoneCodeChallenge.Controllers
         private readonly ApplicationDbContext _context;
 
 
-        // GET api/values
+        // POST api/contact/[contact]
         [HttpPost]
-        public ActionResult<IEnumerable<string>> Create([FromBody] Contact contact)
+        public Contact Create([FromBody] Contact contact)
         {
             if (!ModelState.IsValid)
             {
