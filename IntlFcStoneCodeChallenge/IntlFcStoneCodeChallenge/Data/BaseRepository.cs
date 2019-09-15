@@ -8,7 +8,7 @@ namespace IntlFcStoneCodeChallenge.Data
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
-        private Dictionary<int, TEntity> _entities;
+        protected Dictionary<int, TEntity> _entities;
 
         public BaseRepository()
         {
