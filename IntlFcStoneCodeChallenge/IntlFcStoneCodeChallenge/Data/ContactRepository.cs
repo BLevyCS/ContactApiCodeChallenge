@@ -1,4 +1,5 @@
-﻿using IntlFcStoneCodeChallenge.Models;
+﻿using IntlFcStoneCodeChallenge.Interfaces;
+using IntlFcStoneCodeChallenge.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IntlFcStoneCodeChallenge.Data
 {
-    public class ContactRepository<TEntity> : BaseRepository<TEntity> where TEntity : Contact
+    public class ContactRepository : BaseRepository<Contact>, IContactRepository
     {
         public bool GetByPhone(int phone, out Contact contact)
         {
