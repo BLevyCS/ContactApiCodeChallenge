@@ -6,10 +6,12 @@ namespace IntlFcStoneCodeChallenge.Data
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
         protected Dictionary<int, TEntity> _entities;
+        protected int lastId;
 
         public BaseRepository()
         {
             _entities = new Dictionary<int, TEntity>();
+            lastId = 0;
         }
 
         public bool Get(int id, out TEntity entity)
@@ -35,12 +37,18 @@ namespace IntlFcStoneCodeChallenge.Data
             return true;
         }
 
-        public bool Create(int id, TEntity newEntity)
+        public bool Create(TEntity newEntity, int id = 0)
         {
+            if (id == 0)
+            {
+                id = lastId;
+                lastId++;
+            }
             if (_entities.ContainsKey(id))
                 _entities.Add(id++, newEntity);
             else
                 _entities.Add(id, newEntity);
+            lastId = id;
             return true;
         }
 

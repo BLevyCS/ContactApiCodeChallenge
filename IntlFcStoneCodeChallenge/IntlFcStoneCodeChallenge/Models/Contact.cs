@@ -7,7 +7,7 @@ namespace IntlFcStoneCodeChallenge.Models
 {
     public class Contact
     {
-        public long Id { get; }
+        public int Id { get; }
         public string Name { get; private set; }
         public string Company { get; private set; }
         public string ProfileImageFilename { get; private set; }
