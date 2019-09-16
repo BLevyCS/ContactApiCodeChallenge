@@ -43,8 +43,14 @@ namespace IntlFcStoneCodeChallenge.Controllers
             return _repository.Delete(contact.Id, out outContact);
         }
 
-        [HttpGet("{id}")]
-        [Route("~/contact/(id)")]
+        [HttpGet]
+        public Dictionary<int, Contact> GetAllContacts()
+        {
+            return _repository.GetAllEntities();
+        }
+
+        [HttpGet]
+        [Route("id/{id}")]
         public Contact Get(int id)
         {
             Contact outContact;
@@ -54,45 +60,44 @@ namespace IntlFcStoneCodeChallenge.Controllers
         }
 
         [HttpGet]
-        public Dictionary<int, Contact> GetAllContacts()
-        {
-            return _repository.GetAllEntities();
-        }
-
-        [HttpGet("{phone}")]
-        [Route("~/contact/getPhone/(phone)")]
+        [Route("phone/{phone}")]
         public Contact GetByPhone(string phone)
         {
             Contact contact;
-            _repository.GetByPhone(phone, out contact);
-            return contact;
+            if(_repository.GetByPhone(phone, out contact))
+                return contact;
+            return null;
         }
-
-        [HttpGet("{email}")]
-        [Route("~/contact/getEmail/(email)")]
+        
+        [HttpGet]
+        [Route("email/{email}")]
         public Contact GetByEmail(string email)
         {
             Contact contact;
-            _repository.GetByEmail(email, out contact);
-            return contact;
+            if(_repository.GetByEmail(email, out contact))
+                return contact;
+            return null;
         }
-
-        [HttpGet("{state}")]
-        [Route("~/contact/getAllState/(state)")]
+        
+        [HttpGet]
+        [Route("state/{state}")]
         public List<Contact> GetAllByState(string state)
         {
             List<Contact> contact;
-            _repository.GetAllByState(state, out contact);
-            return contact;
+            if(_repository.GetAllByState(state, out contact))
+                return contact;
+            return null;
         }
-
-        [HttpGet("{city}")]
-        [Route("~/contact/getAllCity/(city)")]
+        
+        [HttpGet]
+        [Route("city/{city}")]
         public List<Contact> GetAllByCity(string city)
         {
             List<Contact> contact;
-            _repository.GetAllByCity(city, out contact);
-            return contact;
+            if(_repository.GetAllByCity(city, out contact))
+                return contact;
+            return null;
         }
+        
     }
 }
