@@ -11,7 +11,7 @@ namespace IntlFcStoneCodeChallenge
     {
         public IList<Contact> GetContacts(int contactsToMake)
         {
-            var id = 1;
+            var id = 0;
             var oldDate = new DateTime(1950, 1, 1, 1, 1, 1, 1);
             var newDate = new DateTime(2001, 1, 1, 1, 1, 1, 1);
             return new Faker<Contact>()

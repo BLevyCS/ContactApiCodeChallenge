@@ -36,5 +36,19 @@ namespace IntlFcStoneCodeChallenge.Data
             contact = _entities.Values.FirstOrDefault(x => x.Email.Equals(email));
             return contact != null;
         }
+
+        public bool GetAllByState(string state, out List<Contact> contacts)
+        {
+            contacts = new List<Contact>();
+            contacts.AddRange(_entities.Values.Where(e => e.Address.Contains(state)));
+            return contacts.Count > 0;
+        }
+
+        public bool GetAllByCity(string city, out List<Contact> contacts)
+        {
+            contacts = new List<Contact>();
+            contacts.AddRange(_entities.Values.Where(e => e.Address.Contains(city)));
+            return contacts.Count > 0;
+        }
     }
 }
