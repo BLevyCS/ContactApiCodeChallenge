@@ -19,7 +19,7 @@ namespace IntlFcStoneCodeChallenge.Controllers
     [ApiController]
     public class ContactController : ControllerBase
     {
-        protected IContactRepository _repository = ContactRepositoryFactory.GetContactRespository;
+        protected IContactRepository _repository = ContactRepositoryFactory.GetFilledContactRespository;
 
         // POST api/contact/create/
         [HttpPost("{Contact}")]

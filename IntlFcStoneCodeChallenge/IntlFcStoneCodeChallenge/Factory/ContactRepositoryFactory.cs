@@ -9,15 +9,22 @@ namespace IntlFcStoneCodeChallenge.Factory
 {
     public static class ContactRepositoryFactory
     {
-        public static IContactRepository GetContactRespository => ContactRepository.Value;
+        public static IContactRepository GetFilledContactRespository => FilledContactRepository.Value;
+        public static IContactRepository GetEmptyContactRepository => EmptyContactRepository.Value;
 
-        private static IContactRepository BuildContactRepository()
+        private static IContactRepository BuildFilledContactRepository()
         {
             var contactGenerator = new MockContactGenerator();
             var contactRepository = new ContactRepository(contactGenerator.GetContacts(10).ToList());
             return contactRepository;
         }
 
-        private static Lazy<IContactRepository> ContactRepository = new Lazy<IContactRepository>(BuildContactRepository);
+        private static IContactRepository BuildEmptyContactRepository()
+        {
+            return new ContactRepository();
+        }
+
+        private static Lazy<IContactRepository> FilledContactRepository = new Lazy<IContactRepository>(BuildFilledContactRepository);
+        private static Lazy<IContactRepository> EmptyContactRepository = new Lazy<IContactRepository>(BuildEmptyContactRepository);
     }
 }

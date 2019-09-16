@@ -17,6 +17,11 @@ namespace IntlFcStoneCodeChallenge.Data
             lastId = startingContacts.Count() + 1;
         }
 
+        public ContactRepository()
+        {
+            lastId = 0;
+        }
+
         public override bool Create(Contact contact)
         {
             contact.Id = lastId;
