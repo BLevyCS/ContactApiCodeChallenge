@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
 using IntlFcStoneCodeChallenge.Data;
+using IntlFcStoneCodeChallenge.Factory;
+using IntlFcStoneCodeChallenge.Interfaces;
 using IntlFcStoneCodeChallenge.Models;
 using Microsoft.AspNetCore.Mvc;
 using FromBodyAttribute = Microsoft.AspNetCore.Mvc.FromBodyAttribute;
@@ -17,7 +19,7 @@ namespace IntlFcStoneCodeChallenge.Controllers
     [ApiController]
     public class ContactController : ControllerBase
     {
-        protected ContactRepository _repository;
+        protected IContactRepository _repository = ContactRepositoryFactory.GetContactRespository;
 
         // POST api/contact/
         [HttpPost("{Contact}")]
