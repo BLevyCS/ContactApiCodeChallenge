@@ -13,7 +13,9 @@ namespace IntlFcStoneCodeChallenge.Factory
 
         private static IContactRepository BuildContactRepository()
         {
-            return new ContactRepository();
+            var contactGenerator = new MockContactGenerator();
+            var contactRepository = new ContactRepository(contactGenerator.GetContacts(10).ToList());
+            return contactRepository;
         }
 
         private static Lazy<IContactRepository> ContactRepository = new Lazy<IContactRepository>(BuildContactRepository);

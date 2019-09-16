@@ -13,8 +13,8 @@ namespace IntlFcStoneCodeChallenge.Models
         public string ProfileImageFilename { get; set; }
         public string Email { get; set; }
         public string BirthDate { get; set; }
-        public UInt64 WorkPhone { get; set; }
-        public UInt64 PersonalPhone { get; set; }
+        public string WorkPhone { get; set; }
+        public string PersonalPhone { get; set; }
         public string Address { get; set; }
     }
 }

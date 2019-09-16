@@ -1,12 +1,22 @@
 ﻿using IntlFcStoneCodeChallenge.Interfaces;
 using IntlFcStoneCodeChallenge.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace IntlFcStoneCodeChallenge.Data
 {
     public class ContactRepository : BaseRepository<Contact>, IContactRepository
     {
+        public ContactRepository(List<Contact> startingContacts)
+        {
+            for (int i = 0; i < startingContacts.Count; i++)
+            {
+                _entities.Add(i, startingContacts[i]);
+            }
+            lastId = startingContacts.Count() + 1;
+        }
+
         public override bool Create(Contact contact)
         {
             contact.Id = lastId;
@@ -15,9 +25,9 @@ namespace IntlFcStoneCodeChallenge.Data
             return true;
         }
 
-        public bool GetByPhone(UInt64 phone, out Contact contact)
+        public bool GetByPhone(string phone, out Contact contact)
         {
-            contact = _entities.Values.FirstOrDefault(x => x.PersonalPhone == phone || x.WorkPhone == phone);
+            contact = _entities.Values.FirstOrDefault(x => x.PersonalPhone.Equals(phone) || x.WorkPhone.Equals(phone));
             return contact != null;
         }
 
