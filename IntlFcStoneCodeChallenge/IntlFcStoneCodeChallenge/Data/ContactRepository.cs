@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace IntlFcStoneCodeChallenge.Data
 {
-    public class ContactRepository : BaseRepository<Contact>, IContactRepository
+    public class ContactRepository : BaseRepository<Contact>, IContactRepository, IDisposable
     {
         public ContactRepository(List<Contact> startingContacts)
         {
@@ -54,6 +54,11 @@ namespace IntlFcStoneCodeChallenge.Data
             contacts = new List<Contact>();
             contacts.AddRange(_entities.Values.Where(e => e.Address.Contains(city)));
             return contacts.Count > 0;
+        }
+
+        public void Dispose()
+        {
+            _entities.Clear();
         }
     }
 }
