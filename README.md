@@ -16,3 +16,7 @@ Notes:
 Feel free to make whatever assumptions you need to about required fields, data formats and
 validations; document whatever assumptions you make. The data can be persisted in whatever
 persistence layer that you want.
+  
+   
+    
+ Uses https://github.com/bchavez/Bogus
