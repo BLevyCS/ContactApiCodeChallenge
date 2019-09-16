@@ -1,12 +1,13 @@
 ﻿using IntlFcStoneCodeChallenge.Interfaces;
 using IntlFcStoneCodeChallenge.Models;
+using System;
 using System.Linq;
 
 namespace IntlFcStoneCodeChallenge.Data
 {
     public class ContactRepository : BaseRepository<Contact>, IContactRepository
     {
-        public bool GetByPhone(int phone, out Contact contact)
+        public bool GetByPhone(UInt64 phone, out Contact contact)
         {
             contact = _entities.Values.FirstOrDefault(x => x.PersonalPhone == phone || x.WorkPhone == phone);
             return contact != null;

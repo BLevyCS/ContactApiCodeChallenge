@@ -7,14 +7,14 @@ namespace IntlFcStoneCodeChallenge.Models
 {
     public class Contact
     {
-        public int Id { get; }
-        public string Name { get; private set; }
-        public string Company { get; private set; }
-        public string ProfileImageFilename { get; private set; }
-        public string Email { get; private set; }
-        public DateTime BirthDate { get; private set; }
-        public int WorkPhone { get; private set; }
-        public int PersonalPhone { get; private set; }
-        public string Address { get; private set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Company { get; set; }
+        public string ProfileImageFilename { get; set; }
+        public string Email { get; set; }
+        public string BirthDate { get; set; }
+        public UInt64 WorkPhone { get; set; }
+        public UInt64 PersonalPhone { get; set; }
+        public string Address { get; set; }
     }
 }

@@ -19,13 +19,11 @@ namespace IntlFcStoneCodeChallenge.Controllers
     {
         protected ContactRepository _repository;
 
-
         // POST api/contact/
-        [HttpPost]
-        public Contact Create([FromBody] Contact contact)
+        [HttpPost("{Contact}")]
+        public void Create([FromBody] Contact contact)
         {
             _repository.Create(contact);
-            return contact;
         }
 
         // PUT api/contact/{Contact}
