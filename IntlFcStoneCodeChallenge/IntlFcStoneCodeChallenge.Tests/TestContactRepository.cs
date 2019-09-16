@@ -14,7 +14,7 @@ namespace IntlFcStoneCodeChallenge.Tests
         public void TestGetAll()
         {
             _repository = ContactRepositoryFactory.GetFilledContactRespository;
-            Assert.AreEqual(_repository.GetAllEntities().Count, 10);
+            Assert.AreEqual(10, _repository.GetAllEntities().Count);
             _repository.Dispose();
         }
 
@@ -24,7 +24,7 @@ namespace IntlFcStoneCodeChallenge.Tests
             _repository = ContactRepositoryFactory.GetFilledContactRespository;
             Contact contact;
             _repository.Delete(0, out contact);
-            Assert.AreEqual(_repository.GetAllEntities().Count, 9);
+            Assert.AreEqual(9, _repository.GetAllEntities().Count);
             _repository.Dispose();
         }
 
@@ -34,7 +34,7 @@ namespace IntlFcStoneCodeChallenge.Tests
             _repository = ContactRepositoryFactory.GetEmptyContactRepository;
             var contact = CommonMethods.GetFakeContact();
             _repository.Create(contact);
-            Assert.AreEqual(_repository.GetAllEntities().Count, 1);
+            Assert.AreEqual(1, _repository.GetAllEntities().Count);
             _repository.Dispose();
         }
 
