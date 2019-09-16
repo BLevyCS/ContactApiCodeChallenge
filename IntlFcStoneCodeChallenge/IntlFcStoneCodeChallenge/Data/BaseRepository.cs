@@ -14,13 +14,13 @@ namespace IntlFcStoneCodeChallenge.Data
             lastId = 0;
         }
 
-        public bool Get(int id, out TEntity entity)
+        public virtual bool Get(int id, out TEntity entity)
         {
             entity = null;
             return _entities.TryGetValue(id, out entity);
         }
 
-        public bool Delete(int id, out TEntity entity)
+        public virtual bool Delete(int id, out TEntity entity)
         {
             entity = null;
             if (!_entities.TryGetValue(id, out entity))
@@ -28,7 +28,7 @@ namespace IntlFcStoneCodeChallenge.Data
             return _entities.Remove(id);
         }
 
-        public bool Update(int id, TEntity updatedEntity)
+        public virtual bool Update(int id, TEntity updatedEntity)
         {
             TEntity entity;
             if (!_entities.TryGetValue(id, out entity))
@@ -37,18 +37,10 @@ namespace IntlFcStoneCodeChallenge.Data
             return true;
         }
 
-        public bool Create(TEntity newEntity, int id = 0)
+        public virtual bool Create(TEntity newEntity)
         {
-            if (id == 0)
-            {
-                id = lastId;
-                lastId++;
-            }
-            if (_entities.ContainsKey(id))
-                _entities.Add(id++, newEntity);
-            else
-                _entities.Add(id, newEntity);
-            lastId = id;
+            _entities.Add(lastId, newEntity);
+            lastId++;
             return true;
         }
 
