@@ -1,4 +1,4 @@
-# IntlFcStoneCodeChallenge
+# ContactApiCodeChallenge
 
 Scope:
 Develop a RESTful API that would allow a web or mobile front-end to:  
@@ -17,6 +17,7 @@ Feel free to make whatever assumptions you need to about required fields, data f
 validations; document whatever assumptions you make. The data can be persisted in whatever
 persistence layer that you want.
   
+ Looks like multiple places use this as a coding challenge. Rather than rewrite it every time, I'm keeping it here.
    
     
  Uses https://github.com/bchavez/Bogus
