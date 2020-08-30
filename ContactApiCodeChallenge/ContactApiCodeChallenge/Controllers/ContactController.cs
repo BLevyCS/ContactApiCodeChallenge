@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
-using IntlFcStoneCodeChallenge.Data;
-using IntlFcStoneCodeChallenge.Factory;
-using IntlFcStoneCodeChallenge.Interfaces;
-using IntlFcStoneCodeChallenge.Models;
+using ContactApiCodeChallenge.Data;
+using ContactApiCodeChallenge.Factory;
+using ContactApiCodeChallenge.Interfaces;
+using ContactApiCodeChallenge.Models;
 using Microsoft.AspNetCore.Mvc;
 using FromBodyAttribute = Microsoft.AspNetCore.Mvc.FromBodyAttribute;
 using HttpDeleteAttribute = Microsoft.AspNetCore.Mvc.HttpDeleteAttribute;
@@ -12,7 +12,7 @@ using HttpPostAttribute = Microsoft.AspNetCore.Mvc.HttpPostAttribute;
 using HttpPutAttribute = Microsoft.AspNetCore.Mvc.HttpPutAttribute;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
-namespace IntlFcStoneCodeChallenge.Controllers
+namespace ContactApiCodeChallenge.Controllers
 {
 
     [Route("api/[controller]")]

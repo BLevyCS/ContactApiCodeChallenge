@@ -1,11 +1,11 @@
 ﻿using Bogus;
-using IntlFcStoneCodeChallenge.Models;
+using ContactApiCodeChallenge.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IntlFcStoneCodeChallenge
+namespace ContactApiCodeChallenge
 {
     public class MockContactGenerator
     {

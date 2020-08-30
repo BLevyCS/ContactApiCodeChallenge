@@ -1,7 +1,7 @@
-﻿using IntlFcStoneCodeChallenge.Interfaces;
+﻿using ContactApiCodeChallenge.Interfaces;
 using System.Collections.Generic;
 
-namespace IntlFcStoneCodeChallenge.Data
+namespace ContactApiCodeChallenge.Data
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {

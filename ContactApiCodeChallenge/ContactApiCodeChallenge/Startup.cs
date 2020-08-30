@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace IntlFcStoneCodeChallenge
+namespace ContactApiCodeChallenge
 {
     public class Startup
     {

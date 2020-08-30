@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace IntlFcStoneCodeChallenge.Interfaces
+namespace ContactApiCodeChallenge.Interfaces
 {
     public interface IBaseRepository<TEntity> where TEntity : class
     {

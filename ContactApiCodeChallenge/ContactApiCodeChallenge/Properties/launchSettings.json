@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "IntlFcStoneCodeChallenge": {
+    "ContactApiCodeChallenge": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/contact",

@@ -1,8 +1,8 @@
-﻿using IntlFcStoneCodeChallenge.Models;
+﻿using ContactApiCodeChallenge.Models;
 using System;
 using System.Collections.Generic;
 
-namespace IntlFcStoneCodeChallenge.Interfaces
+namespace ContactApiCodeChallenge.Interfaces
 {
     public interface IContactRepository : IBaseRepository<Contact>, IDisposable
     {

@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using IntlFcStoneCodeChallenge.Interfaces;
-using IntlFcStoneCodeChallenge.Factory;
-using IntlFcStoneCodeChallenge.Models;
+using ContactApiCodeChallenge.Interfaces;
+using ContactApiCodeChallenge.Factory;
+using ContactApiCodeChallenge.Models;
 
-namespace IntlFcStoneCodeChallenge.Tests
+namespace ContactApiCodeChallenge.Tests
 {
     [TestClass]
     public class TestContactRepository

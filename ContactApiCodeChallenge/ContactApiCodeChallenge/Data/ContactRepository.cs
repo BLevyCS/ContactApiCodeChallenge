@@ -1,10 +1,10 @@
-﻿using IntlFcStoneCodeChallenge.Interfaces;
-using IntlFcStoneCodeChallenge.Models;
+﻿using ContactApiCodeChallenge.Interfaces;
+using ContactApiCodeChallenge.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace IntlFcStoneCodeChallenge.Data
+namespace ContactApiCodeChallenge.Data
 {
     public class ContactRepository : BaseRepository<Contact>, IContactRepository, IDisposable
     {

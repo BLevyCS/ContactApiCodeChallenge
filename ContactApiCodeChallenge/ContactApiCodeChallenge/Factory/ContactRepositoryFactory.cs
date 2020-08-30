@@ -1,11 +1,11 @@
-﻿using IntlFcStoneCodeChallenge.Data;
-using IntlFcStoneCodeChallenge.Interfaces;
+﻿using ContactApiCodeChallenge.Data;
+using ContactApiCodeChallenge.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IntlFcStoneCodeChallenge.Factory
+namespace ContactApiCodeChallenge.Factory
 {
     public static class ContactRepositoryFactory
     {

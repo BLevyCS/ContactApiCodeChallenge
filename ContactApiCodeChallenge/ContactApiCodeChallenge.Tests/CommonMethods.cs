@@ -1,10 +1,10 @@
 ﻿using Bogus;
-using IntlFcStoneCodeChallenge.Models;
+using ContactApiCodeChallenge.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace IntlFcStoneCodeChallenge.Tests
+namespace ContactApiCodeChallenge.Tests
 {
     public class CommonMethods
     {

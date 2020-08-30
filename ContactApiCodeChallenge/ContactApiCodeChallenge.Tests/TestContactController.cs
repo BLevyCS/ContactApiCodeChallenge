@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using IntlFcStoneCodeChallenge.Interfaces;
-using IntlFcStoneCodeChallenge.Factory;
-using IntlFcStoneCodeChallenge.Models;
-using IntlFcStoneCodeChallenge.Controllers;
+using ContactApiCodeChallenge.Interfaces;
+using ContactApiCodeChallenge.Factory;
+using ContactApiCodeChallenge.Models;
+using ContactApiCodeChallenge.Controllers;
 
-namespace IntlFcStoneCodeChallenge.Tests
+namespace ContactApiCodeChallenge.Tests
 {
     [TestClass]
     public class TestContactController
