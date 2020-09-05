@@ -19,5 +19,6 @@ persistence layer that you want.
   
  Looks like multiple places use this as a coding challenge. Rather than rewrite it every time, I'm keeping it here.
    
+ I typically use Visual Studio 20xx to open it. I'm sure you could use VS Code, but when I tried I had difficulties with dependencies.  
     
  Uses https://github.com/bchavez/Bogus
